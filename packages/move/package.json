@@ -1,0 +1,22 @@
+{
+  "name": "@scaffold-move/move",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "account": "node scripts/init-account.js",
+    "chain": "aptos node run-local-testnet",
+    "publish-modules": "node scripts/deploy.js && node scripts/loadModules.js",
+    "compile": "aptos move compile",
+    "test": "aptos move test",
+    "format": "aptos move fmt",
+    "document": "aptos move document"
+  },
+  "dependencies": {
+    "aptos": "^1.21.0",
+    "js-yaml": "^4.1.0",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4",
+    "@types/minimist": "^1.2.5"
+  }
+}

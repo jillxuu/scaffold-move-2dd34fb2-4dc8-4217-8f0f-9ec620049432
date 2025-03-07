@@ -1,0 +1,40 @@
+{
+  "name": "scaffold-move",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "account": "pnpm --filter @scaffold-move/move account",
+    "chain": "pnpm --filter @scaffold-move/move chain",
+    "deploy": "pnpm --filter @scaffold-move/move publish-modules",
+    "compile": "pnpm --filter @scaffold-move/move compile",
+    "test": "pnpm --filter @scaffold-move/move test",
+    "format": "pnpm next:format && pnpm --filter @scaffold-move/move format",
+    "start": "pnpm --filter @scaffold-move/nextjs dev",
+    "next:lint": "pnpm --filter @scaffold-move/nextjs lint",
+    "next:format": "pnpm --filter @scaffold-move/nextjs format",
+    "next:check-types": "pnpm --filter @scaffold-move/nextjs check-types",
+    "next:build": "pnpm --filter @scaffold-move/nextjs build",
+    "next:serve": "pnpm --filter @scaffold-move/nextjs serve",
+    "postinstall": "husky install",
+    "precommit": "lint-staged",
+    "vercel": "pnpm --filter @scaffold-move/nextjs vercel",
+    "vercel:yolo": "pnpm --filter @scaffold-move/nextjs vercel:yolo"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
