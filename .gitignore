@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+.pnpm-store/
+
+# pnpm
+.pnpm-debug.log
+
+# eslint
+.eslintcache
+
+# misc
+.DS_Store
+
+# IDE
+.vscode
+.idea
+
+# cli
+dist
